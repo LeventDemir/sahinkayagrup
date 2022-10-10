@@ -11,13 +11,13 @@
 
     <div id="references" class="column mt-6 pt-6">
       <div class="columns is-centered is-multiline">
-        <div class="column is-half">
+        <div v-for="i in 4" :key="i" class="column is-half">
           <Card />
         </div>
+      </div>
 
-        <div class="column is-half">
-          <Card />
-        </div>
+      <div class="has-text-centered mt-6 pt-6">
+        <nuxt-link :to="{ name: 'references' }" class="button is-link is-outlined is-rounded" tag="button">Daha Fazla</nuxt-link>
       </div>
     </div>
   </div>
@@ -26,11 +26,6 @@
 
 <script>
 export default {
-  layout: "home",
-  mounted() {
-    if (this.$route.params.page) {
-      location.href = "#references"
-    }
-  }
+  layout: "home"
 }
 </script>

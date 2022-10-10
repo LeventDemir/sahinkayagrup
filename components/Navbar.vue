@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link :to="{ name:'index' }" class="navbar-item is-clickable is-size-2 has-text-link" tag="h1">Şahinkaya
+        <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-size-2 has-text-link" tag="h1">Şahinkaya
           Grup</nuxt-link>
         <span class="navbar-burger" data-target="navbarMenuHeroA">
           <span></span>
@@ -12,14 +12,17 @@
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-active has-text-link" tag="div">Ana
+          <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-active has-text-link" tag="a">Ana
             Sayfa</nuxt-link>
 
-          <nuxt-link :to="{name: 'about-us'}" class="navbar-item is-clickable has-text-link" tag="div">Hakkımızda
+          <nuxt-link :to="{name: 'about-us'}" class="navbar-item is-clickable has-text-link" tag="a">Hakkımızda
           </nuxt-link>
 
-          <nuxt-link @click.native="scrollDown()" :to="{ name: 'index', params: {page:'references'} }"
-            class="navbar-item is-clickable is-active has-text-link" tag="div">
+          <a v-if="this.$route.name == 'index'" href="#references"
+            class="navbar-item is-clickable is-active has-text-link">Referanslarımız</a>
+
+          <nuxt-link v-else :to="{ name: 'references', params: {page:'references'} }"
+            class="navbar-item is-clickable is-active has-text-link" tag="a">
             Referanslarımız
           </nuxt-link>
 
@@ -62,9 +65,6 @@ export default {
         .getElementById("navbarBasicExample")
         .classList.toggle("is-active");
       this.$refs.burgerButton.classList.toggle("is-active");
-    },
-    scrollDown() {
-      location.href = "#references"
     }
   }
 };
