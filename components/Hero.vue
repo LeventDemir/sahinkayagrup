@@ -9,8 +9,8 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <p class="is-size-1 has-text-black">Şahinkaya Grup</p>
-        <p class="subtitle has-text-black is-size-4">İnşaat, Hafriyat, Emlak, İletişimi Ticret</p>
+        <p class="is-size-1 has-text-white">Şahinkaya Grup</p>
+        <p class="subtitle has-text-white is-size-4">İnşaat, Hafriyat, Emlak, İletişimi Ticret</p>
       </div>
     </div>
   </section>
