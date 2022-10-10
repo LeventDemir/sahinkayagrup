@@ -15,13 +15,3 @@
     </div>
   </section>
 </template>
-
-
-<style scoped>
-.hero-bg {
-  background: url("../static/hero3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-</style>

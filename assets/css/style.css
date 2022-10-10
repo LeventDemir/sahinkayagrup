@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-bg {
+    background: url("../../static/hero3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.is-clickable {
+    cursor: pointer;
+}
+
+.card {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px 15px rgba(0, 0, 0, 0.1);
+}
