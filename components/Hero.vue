@@ -1,5 +1,5 @@
 <template>
-  <section class="hero hero-bg is-primary is-large">
+  <section class="hero hero-bg is-large">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <!-- Navbar -->
