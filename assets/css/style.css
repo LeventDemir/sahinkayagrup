@@ -24,3 +24,10 @@ html {
 .navbar-item:hover {
     background: none !important;
 }
+
+
+.hide-file-input {
+    position: absolute;
+    margin-top: 20px;
+    opacity: 0;
+}
