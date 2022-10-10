@@ -9,7 +9,7 @@
     </nav>
 
 
-    <div class="column mt-6 pt-6">
+    <div id="references" class="column mt-6 pt-6">
       <div class="columns is-centered is-multiline">
         <div class="column is-half">
           <Card />
@@ -22,3 +22,15 @@
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  layout: "home",
+  mounted() {
+    if (this.$route.params.page) {
+      location.href = "#references"
+    }
+  }
+}
+</script>

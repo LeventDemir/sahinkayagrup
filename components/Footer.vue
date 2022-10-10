@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <div class="content has-text-centered has-text-info">
       <p class="is-size-3 has-text-link mb-6 mt-4">Şahinkaya Grup</p>
 
