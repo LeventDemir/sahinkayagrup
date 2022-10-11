@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-size-2 has-text-link" tag="h1">Şahinkaya
           Grup</nuxt-link>
-        <span class="navbar-burger" data-target="navbarMenuHeroA">
+        <span class="navbar-burger" ref="burgerButton" data-target="navbarMenuHeroA">
           <span></span>
           <span></span>
           <span></span>
@@ -12,16 +12,18 @@
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-active has-text-link" tag="a">Ana
+          <nuxt-link @click.native="close" :to="{ name: 'index' }"
+            class="navbar-item is-clickable is-active has-text-link" tag="a">Ana
             Sayfa</nuxt-link>
 
-          <nuxt-link :to="{name: 'about-us'}" class="navbar-item is-clickable has-text-link" tag="a">Hakkımızda
+          <nuxt-link @click.native="close" :to="{name: 'about-us'}" class="navbar-item is-clickable has-text-link"
+            tag="a">Hakkımızda
           </nuxt-link>
 
           <a v-if="this.$route.name == 'index'" href="#references"
             class="navbar-item is-clickable is-active has-text-link">Referanslarımız</a>
 
-          <nuxt-link v-else :to="{ name: 'references', params: {page:'references'} }"
+          <nuxt-link v-else @click.native="close" :to="{ name: 'references', params: {page:'references'} }"
             class="navbar-item is-clickable is-active has-text-link" tag="a">
             Referanslarımız
           </nuxt-link>
@@ -61,11 +63,11 @@ export default {
   },
   methods: {
     close() {
-      document
-        .getElementById("navbarBasicExample")
-        .classList.toggle("is-active");
-      this.$refs.burgerButton.classList.toggle("is-active");
-    }
+      const navbarMenu = document.getElementById("navbarMenuHeroA");
+      const burgerButton = this.$refs.burgerButton;
+      if (navbarMenu) navbarMenu.classList.toggle("is-active");
+      if (burgerButton) burgerButton.classList.toggle("is-active");
+    },
   }
 };
 </script>
