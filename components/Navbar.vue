@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-size-2 has-text-link" tag="h1">Şahinkaya
+        <nuxt-link :to="{ name: 'index' }" class="navbar-item is-clickable is-size-3 has-text-link" tag="h1">Şahinkaya
           Grup</nuxt-link>
         <span class="navbar-burger" ref="burgerButton" data-target="navbarMenuHeroA">
           <span></span>
