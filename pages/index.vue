@@ -13,9 +13,9 @@
 
 
     <div id="references">
-      <div class="columns is-centered is-multiline">
-        <div v-for="i in 4" :key="i" class="column is-half">
-          <Card />
+      <div class="columns is-multiline is-centered">
+        <div v-for="reference in $store.getters['reference/getTopReferences']" :key="reference._id" class="column is-half">
+          <Card :data="reference" />
         </div>
       </div>
 

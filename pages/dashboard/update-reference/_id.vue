@@ -39,7 +39,6 @@
     
 <script>
 export default {
-    name: "update-reference",
     data() {
         return {
             reference: {

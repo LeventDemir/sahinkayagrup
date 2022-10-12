@@ -21,6 +21,6 @@ export const actions = {
             await dispatch('admin/isAuth')
         }
 
-        //        await dispatch('product/products')
+        await dispatch('reference/references')
     }
-}/*  */
+}

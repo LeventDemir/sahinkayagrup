@@ -3,7 +3,7 @@
         <div id="references" class="column mt-6 pt-6">
             <div class="columns is-centered is-multiline">
                 <div v-for="i in 4" :key="i" class="column is-one-third">
-                    <Card />
+                    <!-- <Card /> -->
                 </div>
             </div>
         </div>

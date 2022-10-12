@@ -1,6 +1,6 @@
 <template>
     <div class="column">
-        <form>
+        <form @submit.prevent="$store.dispatch('reference/create', reference)">
             <input @change="handleFileUpload" ref="photoInput" class="hide-file-input" type="file" accept="image/*"
                 :required="reference.photo ? false : true" />
 
@@ -13,7 +13,7 @@
 
             <div class="field">
                 <div class="control">
-                    <textarea v-model="reference.text" class="textarea" placeholder="10 lines of textarea"
+                    <textarea v-model="reference.description" class="textarea" placeholder="10 lines of textarea"
                         rows="10"></textarea>
                 </div>
             </div>
@@ -22,8 +22,8 @@
                 <div class="control">
                     <div class="select is-rounded is-fullwidth">
                         <select v-model="reference.status">
-                            <option value="standart">Standart</option>
-                            <option value="home-page">Anasayfa</option>
+                            <option :value="false">Standart</option>
+                            <option :value="true">Anasayfa</option>
                         </select>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ export default {
         return {
             reference: {
                 photo: null,
-                text: null,
-                status: "standart"
+                description: null,
+                status: false
             },
         };
     },
