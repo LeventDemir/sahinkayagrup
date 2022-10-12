@@ -30,17 +30,17 @@ router.post('/sign-up', (req, res) => {
 
 router.post('/sign-in', (req, res) => {
     const data = req.body
-    
+
     Admin.findOne({ username: data.username }, (err, admin) => {
-        console.info(1)
         if (admin) {
             const checkPassword = bcrypt.compareSync(data.password, admin.password)
+
             if (checkPassword) {
                 if (admin.auth) res.json({ token: admin.token })
 
                 else {
                     admin.auth = true
-                    admin.token = jwt.sign({ user: _id }, 'SeCrEtKeY');
+                    admin.token = jwt.sign({ user: admin._id }, 'SeCrEtKeY');
 
                     admin.save(err => {
                         if (!err) res.json({ token: admin.token })

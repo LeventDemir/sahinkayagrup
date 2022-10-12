@@ -31,6 +31,12 @@
           <!-- <a v-else href="#references" class="navbar-item is-clickable is-active has-text-link">Referanslarımız</a> -->
 
           <a href="#contacts" class="navbar-item is-clickable has-text-link">İletişim</a>
+
+          <nuxt-link v-if="$store.getters['admin/getAuth']" @click.native="close" :to="{ name: 'dashboard' }" tag="a"
+            class="navbar-item is-clickable is-active has-text-link">Yönetim paneli</nuxt-link>
+
+          <a v-if="$store.getters['admin/getAuth']" @click="$store.dispatch('admin/signOut'), close()"
+            class="navbar-item is-clickable is-active has-text-link">Çıkış</a>
         </div>
       </div>
     </div>
