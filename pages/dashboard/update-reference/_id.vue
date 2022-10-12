@@ -39,6 +39,7 @@
     
 <script>
 export default {
+    middleware: "admin",
     mounted() {
         this.$store
             .dispatch("reference/reference", this.$route.params.id)

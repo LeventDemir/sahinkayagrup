@@ -39,7 +39,7 @@
     
 <script>
 export default {
-    name: "create-reference",
+    middleware: "admin",
     data() {
         return {
             reference: {
