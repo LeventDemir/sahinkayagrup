@@ -7,7 +7,7 @@
             <div class="columns is-centered is-multiline">
                 <div v-for="reference in $store.getters['reference/getReferences']" :key="reference._id"
                     class="column is-one-third">
-                    <Card :data="reference" />
+                    <Card :data="reference" type="admin"/>
                 </div>
             </div>
         </div>

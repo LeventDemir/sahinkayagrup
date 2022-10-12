@@ -1,6 +1,6 @@
 <template>
     <div class="column">
-        <form>
+        <form @submit.prevent="$store.dispatch('reference/update', reference)">
             <input @change="handleFileUpload" ref="photoInput" class="hide-file-input" type="file" accept="image/*"
                 :required="reference.photo ? false : true" />
 
@@ -13,7 +13,7 @@
 
             <div class="field">
                 <div class="control">
-                    <textarea v-model="reference.text" class="textarea" placeholder="10 lines of textarea"
+                    <textarea v-model="reference.description" class="textarea" placeholder="10 lines of textarea"
                         rows="10"></textarea>
                 </div>
             </div>
@@ -22,15 +22,15 @@
                 <div class="control">
                     <div class="select is-rounded is-fullwidth">
                         <select v-model="reference.status">
-                            <option value="standart">Standart</option>
-                            <option value="home-page">Anasayfa</option>
+                            <option :value="false">Standart</option>
+                            <option :value="true">Anasayfa</option>
                         </select>
                     </div>
                 </div>
             </div>
 
             <div class="has-text-centered">
-                <button class="button is-link is-rounded is-outlined">Yükle</button>
+                <button class="button is-link is-rounded is-outlined">Güncelle</button>
             </div>
         </form>
     </div>
@@ -39,13 +39,18 @@
     
 <script>
 export default {
+    mounted() {
+        this.$store
+            .dispatch("reference/reference", this.$route.params.id)
+            .then((response) => {
+                response.id = response._id;
+                delete response._id;
+                this.reference = response;
+            });
+    },
     data() {
         return {
-            reference: {
-                photo: null,
-                text: null,
-                status: "standart"
-            },
+            reference: {},
         };
     },
     methods: {

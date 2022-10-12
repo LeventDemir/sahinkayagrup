@@ -1,16 +1,21 @@
 <template>
-    <div class="card is-clickable">
-        <div class="card-image">
+    <div class="card">
+        <nuxt-link :to="{ name: 'reference-id', params: { id: data._id } }" class="card-image is-clickable" tag="div">
             <figure class="image is-4by3">
                 <img :src="data.photo" alt="Placeholder image">
             </figure>
-        </div>
+        </nuxt-link>
         <div class="card-content">
             <div class="content">
                 {{ data.description }}
                 <br>
             </div>
         </div>
+        <footer v-if="type == 'admin'" class="card-footer">
+            <nuxt-link :to="{ name: 'dashboard-update-reference-id', params: { id: data._id } }"
+                class="card-footer-item has-text-success" tag="a">Güncelle</nuxt-link>
+            <a @click="$store.dispatch('reference/delete', data._id)" class="card-footer-item has-text-danger">Sil</a>
+        </footer>
     </div>
 </template>
 
@@ -22,7 +27,8 @@ export default {
         data: {
             type: Object,
             required: true
-        }
+        },
+        type: String
     }
 }
 </script>
