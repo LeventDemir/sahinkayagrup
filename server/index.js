@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 
 const app = express()
 const admin = require('./routes/admin')
+const reference = require('./routes/reference')
 
 
 mongoose.connect('mongodb+srv://sahinkaya-grup:sahinkaya-grup@cluster0.tysekxx.mongodb.net/?retryWrites=true&w=majority', {
@@ -14,6 +15,7 @@ mongoose.connect('mongodb+srv://sahinkaya-grup:sahinkaya-grup@cluster0.tysekxx.m
 
 app.use(bodyParser.json())
 app.use('/admin', admin)
+app.use('/reference', reference)
 
 
 module.exports = app
