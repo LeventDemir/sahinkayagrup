@@ -2,7 +2,7 @@
   <div class="level-item has-text-centered">
     <div class="box has-background-grey-lighter">
       <p>
-        <span class="icon is-size-4 has-text-link">
+        <span class="icon is-size-4 has-text-info">
           <i :class="icon"></i>
         </span>
       </p>

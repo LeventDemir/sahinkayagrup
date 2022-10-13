@@ -12,7 +12,7 @@
 
         <br />
 
-        <router-link :to="{ name: 'index' }" tag="button" class="button is-link is-outlined is-rounded">Anasayfaya Dön
+        <router-link :to="{ name: 'index' }" tag="button" class="button is-info is-outlined is-rounded">Anasayfaya Dön
         </router-link>
     </div>
 </template>

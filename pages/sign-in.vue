@@ -22,7 +22,7 @@
       <br />
 
       <div class="has-text-centered">
-        <button class="button is-link is-rounded is-outlined">Giriş Yap</button>
+        <button class="button is-info is-rounded is-outlined">Giriş Yap</button>
       </div>
     </form>
   </div>

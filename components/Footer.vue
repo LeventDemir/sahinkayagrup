@@ -1,7 +1,7 @@
 <template>
   <footer id="contacts" class="footer">
     <div class="content has-text-centered has-text-info">
-      <p class="is-size-3 has-text-link mb-6 mt-4">Şahinkaya Grup</p>
+      <p class="is-size-3 has-text-info mb-6 mt-4">Şahinkaya Grup</p>
 
       <p class="mb-6">
         <span class="pr-2"><i class="fa fa-map-location-dot"></i></span>

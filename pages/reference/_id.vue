@@ -21,7 +21,7 @@
       <a href="tel:+905530615830">
         <span class="has-text-black">İletişim için arayın: &nbsp; &nbsp;</span>
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
-        <span class="has-text-link">+90 553 061 58 30</span>
+        <span class="has-text-info">+90 553 061 58 30</span>
       </a>
     </p>
 
@@ -35,7 +35,7 @@
           >İletişim için mesaj atın: &nbsp; &nbsp;</span
         >
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
-        <span class="has-text-link">+90 553 061 5830</span>
+        <span class="has-text-info">+90 553 061 5830</span>
       </a>
     </p>
   </div>

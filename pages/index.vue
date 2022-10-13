@@ -20,7 +20,7 @@
       </div>
 
       <div class="has-text-centered mt-6 pt-6">
-        <nuxt-link :to="{ name: 'references' }" class="button is-link is-outlined is-rounded" tag="button">Daha Fazla
+        <nuxt-link :to="{ name: 'references' }" class="button is-info is-outlined is-rounded" tag="button">Daha Fazla
         </nuxt-link>
       </div>
     </div>

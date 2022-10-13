@@ -45,7 +45,7 @@
       </div>
 
       <div class="has-text-centered">
-        <button class="button is-link is-rounded is-outlined">Güncelle</button>
+        <button class="button is-info is-rounded is-outlined">Güncelle</button>
       </div>
     </form>
   </div>
