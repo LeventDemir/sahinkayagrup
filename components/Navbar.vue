@@ -2,18 +2,9 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link
-          :to="{ name: 'index' }"
-          tag="img"
-          src="/logo4.png"
-          class="navbar-item logo is-clickable"
-          >Şahinkaya Grup</nuxt-link
-        >
-        <span
-          class="navbar-burger"
-          ref="burgerButton"
-          data-target="navbarMenuHeroA"
-        >
+        <nuxt-link :to="{ name: 'index' }" tag="img" src="/logo.png" class="navbar-item logo is-clickable">Şahinkaya
+          Grup</nuxt-link>
+        <span class="navbar-burger" ref="burgerButton" data-target="navbarMenuHeroA">
           <span></span>
           <span></span>
           <span></span>
@@ -21,58 +12,28 @@
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <nuxt-link
-            @click.native="close"
-            :to="{ name: 'index' }"
-            class="navbar-item is-clickable is-active has-text-info"
-            tag="a"
-            >Ana Sayfa</nuxt-link
-          >
+          <nuxt-link @click.native="close" :to="{ name: 'index' }"
+            class="navbar-item is-clickable is-active has-text-info" tag="a">Ana Sayfa</nuxt-link>
 
-          <nuxt-link
-            @click.native="close"
-            :to="{ name: 'about-us' }"
-            class="navbar-item is-clickable has-text-info"
-            tag="a"
-            >Hakkımızda
+          <nuxt-link @click.native="close" :to="{ name: 'about-us' }" class="navbar-item is-clickable has-text-info"
+            tag="a">Hakkımızda
           </nuxt-link>
 
-          <a
-            v-if="this.$route.name == 'index'"
-            href="#references"
-            class="navbar-item is-clickable is-active has-text-info"
-            >Referanslarımız</a
-          >
+          <a v-if="this.$route.name == 'index'" href="#references"
+            class="navbar-item is-clickable is-active has-text-info">Referanslarımız</a>
 
-          <nuxt-link
-            v-else
-            @click.native="close"
-            :to="{ name: 'references', params: { page: 'references' } }"
-            class="navbar-item is-clickable is-active has-text-info"
-            tag="a"
-          >
+          <nuxt-link v-else @click.native="close" :to="{ name: 'references', params: { page: 'references' } }"
+            class="navbar-item is-clickable is-active has-text-info" tag="a">
             Referanslarımız
           </nuxt-link>
 
-          <a href="#contacts" class="navbar-item is-clickable has-text-info"
-            >İletişim</a
-          >
+          <a href="#contacts" class="navbar-item is-clickable has-text-info">İletişim</a>
 
-          <nuxt-link
-            v-if="$store.getters['admin/getAuth']"
-            @click.native="close"
-            :to="{ name: 'dashboard' }"
-            tag="a"
-            class="navbar-item is-clickable is-active has-text-info"
-            >Yönetim paneli</nuxt-link
-          >
+          <nuxt-link v-if="$store.getters['admin/getAuth']" @click.native="close" :to="{ name: 'dashboard' }" tag="a"
+            class="navbar-item is-clickable is-active has-text-info">Yönetim paneli</nuxt-link>
 
-          <a
-            v-if="$store.getters['admin/getAuth']"
-            @click="$store.dispatch('admin/signOut'), close()"
-            class="navbar-item is-clickable is-active has-text-info"
-            >Çıkış</a
-          >
+          <a v-if="$store.getters['admin/getAuth']" @click="$store.dispatch('admin/signOut'), close()"
+            class="navbar-item is-clickable is-active has-text-info">Çıkış</a>
         </div>
       </div>
     </div>
