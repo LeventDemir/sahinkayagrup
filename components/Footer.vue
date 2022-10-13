@@ -19,7 +19,7 @@
 
       <p>
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
-        <span>0552 754 85 00</span>
+        <span>0533 885 00 64</span>
       </p>
     </div>
   </footer>

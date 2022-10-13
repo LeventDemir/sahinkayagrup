@@ -18,7 +18,7 @@
     <hr />
 
     <p class="mt-6 mb-4 pt-3">
-      <a href="tel:+905530615830">
+      <a href="tel:+9005338850064">
         <span class="has-text-black">İletişim için arayın: &nbsp; &nbsp;</span>
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
         <span class="has-text-info">+90 553 061 58 30</span>
@@ -27,7 +27,7 @@
 
     <p>
       <a
-        href="//api.whatsapp.com/send?phone=+905527548500"
+        href="//api.whatsapp.com/send?phone=+9005338850064"
         title="Share on whatsapp"
         target="_blank"
       >
