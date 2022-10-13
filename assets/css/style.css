@@ -30,3 +30,8 @@ html {
     margin-top: 20px;
     opacity: 0;
 }
+
+.is-read {
+    overflow: hidden;
+    border: none !important;
+}
