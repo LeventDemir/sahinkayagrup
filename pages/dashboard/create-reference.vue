@@ -52,15 +52,19 @@ export default {
     methods: {
         handleFileUpload(e) {
             const files = e.target.files || e.dataTransfer.files;
+
             if (!files.length) return;
+
             const reader = new FileReader();
+
             if (files[0].size / (1024 * 1024) < 6) {
                 const vm = this;
+
                 reader.onload = (e) => (vm.reference.photo = e.target.result);
                 reader.readAsDataURL(files[0]);
+
                 this.reference.photo = "";
-            } else
-                this.$toast.error("Yükleyeceğiniz fotoğraf 6 mb dan küçük olmalıdır!");
+            } else this.$toast.error("Yükleyeceğiniz fotoğraf 6 mb dan küçük olmalıdır!");
         }
     }
 };

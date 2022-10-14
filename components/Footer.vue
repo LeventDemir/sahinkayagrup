@@ -1,7 +1,7 @@
 <template>
   <footer id="contacts" class="footer">
     <div class="content has-text-centered has-text-info">
-      <p class="mb-5">
+      <p class="mb-6 mt-2">
         <img src="/alt_logo.png" width="150" />
       </p>
 

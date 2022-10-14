@@ -6,10 +6,10 @@
           Şahinkaya Grup
         </nuxt-link>
 
-        <span class="navbar-burger" ref="burgerButton" data-target="navbarMenuHeroA">
-          <span></span>
-          <span></span>
-          <span></span>
+        <span class="navbar-burger has-text-black-bis" ref="burgerButton" data-target="navbarMenuHeroA">
+          <span style="border: .5px black solid"></span>
+          <span style="border: .5px black solid"></span>
+          <span style="border: 1.2px  black solid"></span>
         </span>
       </div>
 

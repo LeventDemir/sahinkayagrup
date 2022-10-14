@@ -12,8 +12,7 @@ mongoose.connect('mongodb+srv://sahinkaya-grup:sahinkaya-grup@cluster0.tysekxx.m
     useUnifiedTopology: true
 })
 
-
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '30mb' }))
 app.use('/admin', admin)
 app.use('/reference', reference)
 
