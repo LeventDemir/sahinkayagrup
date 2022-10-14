@@ -1,22 +1,13 @@
 <template>
   <div class="column">
     <form @submit.prevent="$store.dispatch('reference/update', reference)">
-      <input
-        @change="handleFileUpload"
-        ref="photoInput"
-        class="hide-file-input"
-        type="file"
-        accept="image/*"
-        :required="reference.photo ? false : true"
-      />
+      <input @change="handleFileUpload" ref="photoInput" class="hide-file-input" type="file" accept="image/*"
+        :required="reference.photo ? false : true" />
 
       <div class="field">
         <div class="control">
-          <button
-            type="button"
-            @click="$refs.photoInput.click()"
-            class="button is-fullwidth is-success is-rounded is-outlined"
-          >
+          <button type="button" @click="$refs.photoInput.click()"
+            class="button is-fullwidth is-success is-rounded is-outlined">
             Fotoğraf Yükle
           </button>
         </div>
@@ -24,12 +15,8 @@
 
       <div class="field">
         <div class="control">
-          <textarea
-            v-model="reference.description"
-            class="textarea"
-            placeholder="10 lines of textarea"
-            rows="10"
-          ></textarea>
+          <textarea v-model="reference.description" class="textarea" placeholder="10 lines of textarea"
+            rows="10"></textarea>
         </div>
       </div>
 

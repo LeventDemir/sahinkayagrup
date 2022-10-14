@@ -6,7 +6,8 @@
           <i :class="icon"></i>
         </span>
       </p>
-      <p class="is-size-5 has-text-black">{{ title }}</p>
+
+      <p class="is-size-5 has-text-grey-dark">{{ title }}</p>
     </div>
   </div>
 </template>

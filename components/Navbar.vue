@@ -2,14 +2,17 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link :to="{ name: 'index' }" tag="img" src="/logo.png" class="navbar-item logo is-clickable">Şahinkaya
-          Grup</nuxt-link>
+        <nuxt-link :to="{ name: 'index' }" tag="img" src="/logo.png" class="navbar-item logo is-clickable">
+          Şahinkaya Grup
+        </nuxt-link>
+
         <span class="navbar-burger" ref="burgerButton" data-target="navbarMenuHeroA">
           <span></span>
           <span></span>
           <span></span>
         </span>
       </div>
+
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
           <nuxt-link @click.native="close" :to="{ name: 'index' }"
@@ -68,6 +71,7 @@ export default {
     close() {
       const navbarMenu = document.getElementById("navbarMenuHeroA");
       const burgerButton = this.$refs.burgerButton;
+
       if (navbarMenu) navbarMenu.classList.toggle("is-active");
       if (burgerButton) burgerButton.classList.toggle("is-active");
     },

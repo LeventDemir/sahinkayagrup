@@ -7,19 +7,17 @@
 
       <p class="mb-6">
         <span class="pr-2"><i class="fa fa-map-location-dot"></i></span>
-        <span
-          >skiçeşme Mah. Sadi Irmak Cad. No: 19/B Gümbet - Bodrum - Muğla</span
-        >
+        <span>skiçeşme Mah. Sadi Irmak Cad. No: 19/B Gümbet - Bodrum - Muğla</span>
       </p>
 
       <p class="mb-6">
         <span class="pr-2"><i class="fa fa-envelope"></i></span>
-        <span>narinhanimbaharat@gmail.com</span>
+        <span>info@sahinkayagrup.com</span>
       </p>
 
       <p>
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
-        <span>0533 885 00 64</span>
+        <span>0 553 685 00 64</span>
       </p>
     </div>
   </footer>

@@ -14,13 +14,15 @@
 
     <div id="references">
       <div class="columns is-multiline is-centered">
-        <div v-for="reference in $store.getters['reference/getTopReferences']" :key="reference._id" class="column is-half">
+        <div v-for="reference in $store.getters['reference/getTopReferences']" :key="reference._id"
+          class="column is-half">
           <Card :data="reference" />
         </div>
       </div>
 
       <div class="has-text-centered mt-6 pt-6">
-        <nuxt-link :to="{ name: 'references' }" class="button is-info is-outlined is-rounded" tag="button">Daha Fazla
+        <nuxt-link :to="{ name: 'references' }" class="button is-info is-outlined is-rounded" tag="button">
+          Daha Fazla
         </nuxt-link>
       </div>
     </div>
