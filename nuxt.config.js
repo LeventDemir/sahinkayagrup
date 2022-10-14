@@ -5,7 +5,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Şahinkaya Grup inşaat, tadilat, tamirat, hafriyat, emlak, iletişim, ticaret' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'apple-mobile-web-app-title', content: 'Şahinkaya Grup' },
       { name: 'application-name', content: 'Şahinkaya Grup' },
@@ -60,7 +60,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.BASE_URL || 'http://localhost:3000/api',
+    baseURL: process.env.API_BASE_URL || 'http://localhost:3000/api',
   },
 
   toast: {

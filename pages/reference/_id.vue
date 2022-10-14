@@ -13,18 +13,18 @@
     <hr />
 
     <p class="mt-6 mb-4 pt-3">
-      <a href="tel:+905536850064">
+      <a href="tel:+905336850064">
         <span class="has-text-grey-dark">arayın:</span>
         <span class="has-text-info pr-2 pl-3"><i class="fa fa-phone"></i></span>
-        <span class="has-text-info">0 553 685 00 64</span>
+        <span class="has-text-info">0 533 685 00 64</span>
       </a>
     </p>
 
     <p>
-      <a href="https://wa.me/+905338850064" title="Share on whatsapp" target="_blank">
+      <a href="https://wa.me/+905336850064" title="Share on whatsapp" target="_blank">
         <span class="has-text-grey-dark">WhatsApp'tan mesaj atın:</span>
         <span class="has-text-info pr-2 pl-3"><i class="fa-brands fa-whatsapp"></i></span>
-        <span class="has-text-info">0 553 685 00 64</span>
+        <span class="has-text-info">0 533 685 00 64</span>
       </a>
     </p>
   </div>

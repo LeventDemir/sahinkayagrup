@@ -17,7 +17,7 @@
 
       <p>
         <span class="pr-2"><i class="fa-solid fa-phone"></i></span>
-        <span>0 553 685 00 64</span>
+        <span>0 533 685 00 64</span>
       </p>
     </div>
   </footer>
