@@ -12,6 +12,9 @@ mongoose.connect('mongodb+srv://sahinkaya-grup:sahinkaya-grup@cluster0.tysekxx.m
     useUnifiedTopology: true
 })
 
+mongoose.connection.on("open", () => console.log("✔ Connected to mongodb"));
+mongoose.connection.on("error", err => console.log({ mongooseError: err }));
+
 app.use(bodyParser.json({ limit: '30mb' }))
 app.use('/admin', admin)
 app.use('/reference', reference)
