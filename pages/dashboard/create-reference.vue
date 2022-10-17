@@ -64,7 +64,7 @@ export default {
                 reader.readAsDataURL(files[0]);
 
                 this.reference.photo = "";
-            } else this.$toast.error("Yükleyeceğiniz fotoğraf 6 mb dan küçük olmalıdır!");
+            } else this.$toast.global.error("Yükleyeceğiniz fotoğraf 6 mb dan küçük olmalıdır!");
         }
     }
 };
