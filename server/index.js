@@ -7,7 +7,7 @@ const admin = require('./routes/admin')
 const reference = require('./routes/reference')
 
 
-mongoose.connect('mongodb+srv://sahinkaya-grup:sahinkaya-grup@cluster0.tysekxx.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://sahinkayagrup:sahinkayagrup@cluster0.1l1jbo2.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

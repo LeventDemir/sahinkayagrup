@@ -30,7 +30,7 @@
             </div>
 
             <div class="has-text-centered">
-                <button class="button is-info is-rounded is-outlined">Yükle</button>
+                <button class="button is-info is-rounded is-outlined" type="submit">Yükle</button>
             </div>
         </form>
     </div>
