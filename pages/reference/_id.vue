@@ -7,7 +7,7 @@
     <hr />
 
     <p>
-      <textarea class="textarea has-fixed-size is-read" readonly :draggable="false" v-model="reference.description" />
+      <textarea ref="description" class="textarea has-fixed-size is-read" readonly v-model="reference.description" />
     </p>
 
     <hr />
@@ -32,17 +32,24 @@
 
 <script>
 export default {
-  async asyncData({ params, store }) {
-    return store.dispatch("reference/reference", params.id).then((response) => {
-      return { reference: response };
-    });
+  data() {
+    return {
+      reference: {
+        photo: null,
+        description: null
+      }
+    }
   },
-
   mounted() {
-    const textarea = document.getElementsByTagName("textarea")[0];
-    const height = textarea.scrollHeight;
+    this.$store.dispatch("reference/reference", this.$route.params.id).then((response) => {
+      this.reference.photo = response.photo
+      this.reference.description = response.description
+    }).then(() => {
+      const textarea = document.getElementsByTagName("textarea")[0];
+      const height = textarea.scrollHeight;
 
-    textarea.style.cssText = "height:" + height + "px";
+      textarea.style.cssText = "height:" + height + "px";
+    })
   },
 };
 </script>
