@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 const app = express()
 const admin = require('./routes/admin')
@@ -15,6 +16,7 @@ mongoose.connect('mongodb+srv://sahinkayagrup:sahinkayagrup@cluster0.1l1jbo2.mon
 mongoose.connection.on("open", () => console.log("✔ Connected to mongodb"));
 mongoose.connection.on("error", err => console.log({ mongooseError: err }));
 
+app.use(cors())
 app.use(bodyParser.json({ limit: '30mb' }))
 app.use('/admin', admin)
 app.use('/reference', reference)
